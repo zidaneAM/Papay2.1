@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap'); 
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Bungee', cursive;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: orange;/*color del borde del menú*/
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: 800;   
+}
+
+.navegation ul{
+    list-style: none;
+}
+
+.header .navegation ul li{
+    float: left;
+    position: relative;
+}
+
+.header .navegation ul li a{
+    font-size: 18px;
+    color: black; /* color de letra del menú*/
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+.header .navegation ul li a:hover{
+    background-color: rgb(242, 103, 11);/*color de navegación*/
+}
+
+.header .navegation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: transparent;/*color del submenu*/
+    display: none;
+}
+
+.header .navegation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navegation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navegation ul li ul li {
+    width: 100%;
+}
+
+.header .navegation ul li:hover > ul {
+    display: initial;
+}
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 45px;
+    height: 35px;
+}
+
+@media(max-width:950px){
+    .header label {
+        display: initial;
+    }
+
+    .header {
+        padding: 20px 10%;
+    }
+    .header .navegation{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 190, 11, 0.7);
+        display: none;
+    }
+    .header .navegation ul li{
+        width: 100%;
+
+    }
+    .header .navegation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navegation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navegation ul li ul li{
+        background-color: orangered;
+    }
+    .header .navegation ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    #toggle:checked ~ .navegation{
+        display: block;
+    }
+}
+
+#content{
+    font-family: 'Carrois Gothic', sans-serif;
+    background: rgb(255, 194, 81);
+    width: 25%;
+    padding: 30px ;
+    margin: auto;
+    margin-top: 250px;/*Ubicacion del cuadrado*/
+    border-radius: 4px;
+    color: black;
+    box-shadow: 7px 13px 37px #000;
+}
+
+footer{
+    background-color: black;
+    color: orange;
+    text-align: center;
+    width: 100%;
+    min-height: 1rem;
+}
+
+#content h4{
+font-size: 30px;
+margin-bottom:25px;
+}
+nav .botonir{
+    background-color: black;
+    color: orange;
+    border: none;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.controles{
+    width: 100%;
+    background-color: rgb(255, 194, 81);
+    padding: 3px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+div a{
+    color: black;
+    text-decoration: none;
+}
+#content a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+#content a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+#content .boton{
+    width: 100%;
+    background-color: black;
+    border: none;
+    padding: 12px;
+    margin: 16px 0;
+    color: orange;
+    font-size: 20px;
+}
+footer{
+    background-color: black;
+    color: orange;
+    text-align: center;
+    width: 100%;
+    min-height: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap'); 
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Bungee', cursive;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: orange;/*color del borde del menú*/
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.content1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    height: 40px; /*mover de abajo o hacia arriba*/
+    height: 80vh !important;
+    background-image: url(pensionistas.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;    
+    padding: 50px 300px;
+}
+.content1 p{
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(33, 2, 2); /*color del texto*/
+}
+
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: 800;   
+}
+
+.navegation ul{
+    list-style: none;
+}
+
+.header .navegation ul li{
+    float: left;
+    position: relative;
+}
+
+.header .navegation ul li a{
+    font-size: 18px;
+    color: black; /* color de letra del menú*/
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+.header .navegation ul li a:hover{
+    background-color: rgb(242, 103, 11);/*color de navegación*/
+}
+
+.header .navegation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: transparent;/*color del submenu*/
+    display: none;
+}
+
+.header .navegation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navegation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navegation ul li ul li {
+    width: 100%;
+}
+
+.header .navegation ul li:hover > ul {
+    display: initial;
+}
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 45px;
+    height: 35px;
+}
+
+@media(max-width:950px){
+    .header label {
+        display: initial;
+    }
+
+    .header {
+        padding: 20px 10%;
+    }
+    .header .navegation{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 190, 11, 0.7);
+        display: none;
+    }
+    .header .navegation ul li{
+        width: 100%;
+
+    }
+    .header .navegation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navegation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navegation ul li ul li{
+        background-color: orangered;
+    }
+    .header .navegation ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    #toggle:checked ~ .navegation{
+        display: block;
+    }
+}
+
+/*-----------Mision--------------*/
+
+.conter{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 15%;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgb(234, 244, 245);
+    color: rgb(87, 65, 6);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease; 
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(32, 30, 30, 0.5);
+    transform: translateY(-5%);
+}
+
+.card img{
+    width: 100%;
+    right: 210px;
+}
+.card .contenido{
+    text-align: center;
+    padding: 15px;
+}
+
+.card .contenido p{
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+.card .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: black;
+    color: orange;
+    text-align: center;
+    width: 100%;
+    min-height: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*------------------Nosotros-----------------------------*/
+
+.new-contianer{
+    max-width: 80%;
+    margin: 50px auto 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.new-contianer .block{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.new-contianer .block .image{
+    flex: 0 0 auto;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(11, 162, 6, 0.3);
+    line-height: 0;
+}
+
+.new-contianer .block .image img{
+    width: 100%;
+    transition: .3s;    
+    transform: scale(1);
+}
+
+.new-contianer .block .image:hover img{
+    transform: scale(1.05);
+
+}
+
+.new-contianer .block .contenido1{
+    flex: 0 0 auto;
+    width: calc(100% - 400px);
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.new-contianer .block .contenido1 h5{
+    font-weight: 700;
+    font-size: 22px;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+
+.new-contianer .block .contenido1 p{
+    font-size: 15px;
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .new-contianer .block:nth-child(odd) .image{
+        order: 1;
+    }
+    .new-contianer .block:nth-child(even) .image{
+        order: 2;
+    }
+    .new-contianer .block:nth-child(odd) .contenido1{
+        order: 2;
+        padding-left: 30px;
+    }
+    .new-contianer .block:nth-child(even) .contenido1{
+        order: 1;
+        padding-right: 30px;
+    }
+}
+
+/*---------------Producto------------------------------------------------------------------------------------*/
+
